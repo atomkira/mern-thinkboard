@@ -5,17 +5,26 @@
   "scripts": {
     "client": "cd frontend/vite-project && npm run dev",
     "server": "cd backend && nodemon index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install --prefix backend && npm install --prefix  frontend && npm run build --prefix frontend/vite-project",
+"start": "cd backend && nodemon index.js"  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "concurrently": "^9.2.0"
   },
   "dependencies": {
     "dayjs": "^1.11.13",
     "ky": "^1.8.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomkira/mern-thinkboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atomkira/mern-thinkboard/issues"
+  },
+  "homepage": "https://github.com/atomkira/mern-thinkboard#readme",
+  "description": ""
 }
