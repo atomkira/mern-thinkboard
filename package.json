@@ -6,7 +6,7 @@
     "client": "cd frontend/vite-project && npm run dev",
     "server": "cd backend && nodemon index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm install --prefix backend && npm install --prefix  frontend && npm run build --prefix frontend/vite-project",
+    "build": "npm install --prefix backend && npm install --prefix  frontend/vite-project && npm run build --prefix frontend/vite-project",
 "start": "cd backend && nodemon index.js"  },
   "keywords": [],
   "author": "",
