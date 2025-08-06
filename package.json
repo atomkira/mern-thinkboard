@@ -1,0 +1,21 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd frontend/vite-project && npm run dev",
+    "server": "cd backend && nodemon index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "ky": "^1.8.2"
+  }
+}
