@@ -38,6 +38,8 @@ app.use((req, res, next) => {
 
 // Routes
 app.use("/api/notes", notesRoutes);
+//app.use("/api/notes", require("./routes/notes.js"));
+
 
 // Serve frontend in production
 if (process.env.NODE_ENV === "production") {
@@ -56,3 +58,4 @@ connectDB().then(() => {
     console.log("Server started on PORT:", PORT);
   });
 });
+

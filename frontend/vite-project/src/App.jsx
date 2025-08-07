@@ -3,7 +3,7 @@ import Homepage from './pages/Homepage.jsx';
 import CreatePage from './pages/CreatePage.jsx';
 import NoteDetailPage from './pages/NoteDetailPage.jsx';
 import toast, { Toaster } from "react-hot-toast";
-
+import axios from "axios";
 const App = () => {
   return (
     <div className="relative h-full w-full">
@@ -16,5 +16,13 @@ const App = () => {
     </div>
   );
 };
+
+let userId = localStorage.getItem("userId");
+
+if (!userId) {
+  userId = crypto.randomUUID(); // or use a custom ID generator
+  localStorage.setItem("userId", userId);
+}
+axios.defaults.headers.common["x-user-id"] = userId;
 
 export default App;
